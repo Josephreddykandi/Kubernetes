@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-tom
+  labels:
+    app: tomcat
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30003
+    protocol: TCP
+  selector:
+    app: tomcat
+
+# in metadata write about the Service properties
+# in specification (spec) we need to specify which type we are using and what port to expose
+# in Selector 
+# in kind: specify what your going to create. 

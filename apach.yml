@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-apache
+spec:
+  containers:
+    - name: apche-sample
+      image: httpd
+      ports:
+      - containerPort: 80

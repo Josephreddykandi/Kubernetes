@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tom-deploy
+spec:
+  selector:
+    matchLabels:
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+      - name: tomcat-demo
+        image: tomcat
+        ports:
+        - containerPort: 8080
+
+# in Template we can write container info
+
+
